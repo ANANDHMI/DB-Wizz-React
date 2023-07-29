@@ -10,12 +10,12 @@ export const ToggleSwitch = ({ label, toggled, onClick }) => {
     }
 
     return (
-        <di>
-        <label>
-            <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
-            <span />
-            <strong>{label}</strong>
+        <div >
+        <label className="toggle-switch-label">
+            <input type="checkbox" defaultChecked={isToggled} onClick={callback} className="toggle-switch-input"/>
+            <span className="toggle-switch-span"/>
+            <strong className="toggle-switch-strong">{label}</strong>
         </label>
-        </di>
+        </div>
     )
 }

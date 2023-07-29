@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import apiService from './apiService';
 import './TextBox.css'
 import { ToggleSwitch } from '../Component/ToggleSwitch/ToggleSwitch';
-import FormComponent from '../Component/FormComponent.js';
+import FormComponent from '../Component/FormComponent/FormComponent';
+import DeleteFormComponent from '../Component/FormComponent/DeleteFormComponent';
+import UpdateFormComponent from '../Component/FormComponent/UpdateFormComponent';
 
 
 const SpwCommon = () => {
@@ -30,14 +32,14 @@ const SpwCommon = () => {
 
   return (
     <div>
-     <FormComponent/>
+    <FormComponent/>
+    <DeleteFormComponent/>
+    <UpdateFormComponent/>
+    <div>
       <h1>Data Display</h1>
      
         {data.map(item => (
           <div>
-            <div className="fixed-text-box">
-              {item.id}
-            </div>
 
             <div className="fixed-text-box">
               {item.variable}
@@ -51,7 +53,7 @@ const SpwCommon = () => {
            
           </div>
         ))}
-    
+    </div>
     </div>
   );
 };
